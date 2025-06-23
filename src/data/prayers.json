@@ -1,0 +1,96 @@
+{
+  "mainPrayer": {
+    "title": "Oración a San Benito",
+    "content": [
+      "¡Oh glorioso San Benito, modelo sublime de virtud, vaso puro de la gracia divina! Aquí estoy, humildemente a tus pies.",
+      "Me confío a tu poderosa intercesión. Protégeme contra los enemigos del alma y del cuerpo, contra los engaños del maligno, contra las tentaciones y los peligros espirituales.",
+      "Bendice mi mente, mi corazón y mi hogar.",
+      "Que la Santa Cruz de nuestro Señor Jesucristo sea mi luz y guía.",
+      "Aleja de mí todo mal, y enséñame a seguir con fidelidad el camino del Evangelio.",
+      "Amén."
+    ]
+  },
+  "dailyPrayers": [
+    {
+      "title": "Padre Nuestro",
+      "emoji": "✝️",
+      "borderColor": "border-blue-500",
+      "content": "Padre nuestro que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación y líbranos del mal. Amén."
+    },
+    {
+      "title": "Ave María",
+      "emoji": "👼",
+      "borderColor": "border-blue-300",
+      "content": "Dios te salve, María, llena eres de gracia; el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+    },
+    {
+      "title": "Gloria",
+      "emoji": "✨",
+      "borderColor": "border-yellow-400",
+      "content": "Gloria al Padre, al Hijo y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+    },
+    {
+      "title": "Credo",
+      "emoji": "🙏",
+      "borderColor": "border-purple-400",
+      "content": "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen..."
+    },
+    {
+      "title": "Oración a la Medalla",
+      "emoji": "⛪",
+      "borderColor": "border-green-500",
+      "content": "La Cruz sagrada sea mi luz, no sea el dragón mi guía. ¡Retírate, Satanás! No me ofrezcas cosas vanas, malvado es lo que me das, bebe tú mismo tu veneno. En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
+    }
+  ],
+  "novenaDays": [
+    {
+      "day": 1,
+      "title": "Día Primero - Deseo del cielo",
+      "prayer": "¡Oh glorioso San Benito, que desde tu infancia reconociste la vanidad del mundo y únicamente deseaste los bienes eternos! Alcánzanos un vivo deseo del cielo y que recordemos frecuentemente a Dios, nuestro último fin, y hacia Él ordenemos toda nuestra vida para que en todo Él sea glorificado.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    },
+    {
+      "day": 2,
+      "title": "Día Segundo - Humildad",
+      "prayer": "¡Oh glorioso San Benito, humilde de corazón, que supiste desdeñar las alabanzas de los hombres! Alcánzanos la humildad, tú que amaste a Dios sobre todas las cosas y le entregaste sin reservas tu corazón, consíguenos también el amor de Dios.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    },
+    {
+      "day": 3,
+      "title": "Día Tercero - Pureza",
+      "prayer": "¡Oh glorioso San Benito, que consagraste tus labios a la oración y cantaste noche y día las alabanzas divinas! Alcánzanos el espíritu de oración. Tú, que cual lirio entre espinas, guardaste una castidad angelical por medio de la humildad, de la vigilancia continua, de la oración y de la mortificación de los sentidos, consíguenos el don de la pureza.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    },
+    {
+      "day": 4,
+      "title": "Día Cuarto - Resistencia al mal",
+      "prayer": "¡Oh glorioso San Benito que venciste al demonio y triunfaste de sus engaños! Alcánzanos la gracia de resistir sus sugestiones y de huir de toda ocasión de pecado. Tú que enseñando una vida austera, de renuncia y trabajo, aborreciste la ociosidad, inspíranos amor al trabajo y a la abnegación de nosotros mismo para seguir a Cristo.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    },
+    {
+      "day": 5,
+      "title": "Día Quinto - Pureza de palabra",
+      "prayer": "¡Oh glorioso San Benito, que amaste el silencio, y no abriste la boca jamás a palabras ligeras e impuras, a quejas, murmuraciones, y a juicios contra el amor al prójimo! Alcánzanos la gracia de no decir jamás palabras impuras y contra la caridad, a perdonar y guardar nuestra lengua de todo pecado.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    },
+    {
+      "day": 6,
+      "title": "Día Sexto - Paciencia",
+      "prayer": "¡Oh glorioso San Benito, que fuiste blanco de persecuciones y guardaste la paz de tu alma por medio de la dulzura de la paciencia! Alcánzanos el don de la paciencia y la gracia de perdonar las ofensas, tú que perdonaste a los que atentaron contra tu vida y te expulsaron de tu país, y que misericordiosamente pediste al Señor les perdonara, llorando su ceguera y terrible fin.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    },
+    {
+      "day": 7,
+      "title": "Día Séptimo - Caridad",
+      "prayer": "¡Oh glorioso San Benito, que animado por un ardiente celo para asistir al prójimo en sus necesidades, instruiste a los ignorantes, socorriste a los pobres, curaste a los enfermos, resucitaste a los muertos, libraste a los cautivos del demonio y de sus pasiones, consolaste a los afligidos y convertiste a los pecadores! Consíguenos la gracia de amar al prójimo y de hacer con él las obras de misericordia.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    },
+    {
+      "day": 8,
+      "title": "Día Octavo - Afectos santificados",
+      "prayer": "¡Oh glorioso San Benito, que inundaste de consuelo el corazón de tu hermana Santa Escolástica, llenándolo del amor de Dios y de las bienaventuranzas del cielo! Concédenos la gracia de santificar nuestros afectos más queridos.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    },
+    {
+      "day": 9,
+      "title": "Día Noveno - Buena muerte",
+      "prayer": "¡Oh glorioso San Benito, cuya alma en tu dichosa muerte, fue elevada al cielo en medio de ángeles y santos, siendo consolados tus discípulos por la revelación de tu gloria! Concédenos del Señor, la gracia de la perseverancia final, de una buena muerte y de tu asistencia e intercesión en nuestro último día.\n\nSan Benito, ruega por nosotros. Tres Avemarías."
+    }
+  ],
+  "novenaCommon": {
+    "preparation": "Te saludamos con filial afecto, oh glorioso Padre San Benito, obrador de maravillas, cooperador de Cristo en la obra de salvación de las almas. ¡Oh Patriarca de los monjes! Mira desde el cielo la viña que plantó tu mano. Multiplica el número de tu hijos, y santifícalos. Protege de un modo especial a cuantos nos ponemos con filial cariño bajo tu amparo y filial protección. Ruega por los enfermos, por los tentados, por los afligidos, por los pobres, y por nosotros que te somos devotos. Alcánzanos a todos una muerte tranquila y santa como la tuya. Aparta de nosotros en aquella hora suprema las asechanzas del enemigo, y aliéntanos con tu dulce presencia. Ahora consíguenos la gracia especial que te pedimos en esta novena...",
+    "final": "¡Oh glorioso San Benito, que desde el cielo eres padre piadoso para nosotros tus devotos! Tu gran poder ante Dios se reconoce hoy, más que nunca, gracias a la medalla que viene honrada con tu nombre, por la multitud de prodigios y favores que por su medio Dios nos ofrece. Ruega por todos los que acudimos a ti. Alcánzanos del Señor, todas la gracias que nos son necesarias durante esta vida y especialmente la gracia por la cual hacemos esta novena. San Benito, ruega por nosotros.\n\nConcluir con un Padrenuestro, Avemaría y Gloria."
+  }
+}
