@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from "next/link";
 import { useTheme } from "../context/ThemeContext";
+import { LuShare } from "react-icons/lu";
 
 export default function Navbar() {
   const { darkMode } = useTheme();
@@ -49,7 +50,7 @@ export default function Navbar() {
               onClick={handleShare}
               className="bg-green-600 text-white px-4 py-1 rounded-full shadow hover:bg-green-700 transition flex items-center gap-2"
             >
-              <span>↗️</span>
+              <span><LuShare /></span>
               <span>Compartir</span>
             </button>
           </div>
@@ -100,7 +101,7 @@ export default function Navbar() {
                 toggleMobileMenu();
               }}
             >
-              <span>↗️</span>
+              <span><LuShare /></span>
               <span>Compartir</span>
             </button>
           </div>

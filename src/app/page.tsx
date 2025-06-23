@@ -8,6 +8,7 @@ import NovenaDayCard from '../components/NovenaDayCard';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import prayersData from '../data/prayers.json';
+import { FaRegTrashCan } from "react-icons/fa6";
 // Image and Link imports removed as they were unused
 
 function HomeContent() {
@@ -94,10 +95,9 @@ function HomeContent() {
               </section>
             ) : (
               <section>
-                <div className={`space-y-4 ${darkMode ? 'text-gray-300' : 'text-gray-700'} p-6`}>
+                <div className={`space-y-4 shadow-md rounded-xl border-t border-b mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-700'} p-6`}>
                   <p>{prayersData.novenaCommon.preparation}</p>
                 </div>
-                
                 {novenaDays.map((day) => (
                   activeTab === `dia-${day.day}` && (
                     <NovenaDayCard
@@ -128,7 +128,7 @@ function HomeContent() {
           onClick={() => setShowClearModal(true)}
           className="bg-red-500 text-white px-4 py-2 rounded-full shadow hover:bg-red-600 transition flex items-center gap-2"
         >
-          <span>🗑️</span>
+          <span><FaRegTrashCan /></span>
           <span>Limpiar</span>
         </button>
       </div>

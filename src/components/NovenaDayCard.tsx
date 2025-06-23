@@ -23,7 +23,7 @@ export default function NovenaDayCard({
     <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} p-6 rounded-xl shadow-lg mb-6 relative`}>
       <div className="absolute top-2 right-2 flex items-center gap-2">
         {isCompleted && (
-          <span className={`text-xs font-semibold ${darkMode ? 'text-green-300' : 'text-green-700'}`}>
+          <span className={`text-xs rounded-bl-full font-semibold ${darkMode ? 'text-green-300' : 'text-green-700'}`}>
             Completado
           </span>
         )}
