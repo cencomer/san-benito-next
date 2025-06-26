@@ -53,8 +53,8 @@ export default function NovenaDayCard({
             <FaCheck className="text-lg" />
           ) : (
             <div className="flex flex-col items-center">
-              <FaBookOpen className="text-sm mb-0.5" />
-              <span className="text-xs">Día {day}</span>
+              <FaBookOpen className={`text-sm mb-0.5 ${darkMode ? 'text-white' : 'text-gray-800'}`} />
+              <span className={`text-xs ${darkMode ? 'text-white' : 'text-gray-800'}`}>Día {day}</span>
             </div>
           )}
         </motion.button>
