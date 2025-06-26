@@ -5,6 +5,8 @@ import NovenaDayCard from '@/components/NovenaDayCard';
 import useNovenaProgress from '@/hooks/useNovenaProgress';
 import prayers from '@/data/prayers.json';
 
+import { FaRegTrashCan } from "react-icons/fa6";
+
 export default function NovenaPage() {
   const { darkMode } = useTheme();
   const { completedDays, toggleDayCompleted, clearProgress } = useNovenaProgress();
@@ -54,7 +56,7 @@ export default function NovenaPage() {
             }}
             className={`px-4 py-2 rounded-lg ${darkMode ? 'bg-red-700 hover:bg-red-600' : 'bg-red-500 hover:bg-red-600'} text-white transition flex items-center gap-2`}
           >
-            <span>🗑️</span>
+            <span><FaRegTrashCan /></span>
             <span>Limpiar progreso</span>
           </button>
         </div>
