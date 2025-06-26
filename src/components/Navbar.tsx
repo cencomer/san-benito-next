@@ -1,13 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from "next/link";
 import { useTheme } from "../context/ThemeContext";
-import { LuShare } from "react-icons/lu";
+import { toast } from 'react-hot-toast';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Navbar() {
-  const { darkMode } = useTheme();
+  const { darkMode, toggleDarkMode } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<'oracion' | 'oraciones' | 'novena'>('oracion');
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    // Detectar pestaña activa basada en ruta
+    if (pathname.includes('/oraciones-diarias')) {
+      setActiveTab('oraciones');
+    } else if (pathname.includes('/novena')) {
+      setActiveTab('novena');
+    } else {
+      setActiveTab('oracion');
+    }
+  }, [pathname, searchParams]);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -15,19 +30,55 @@ export default function Navbar() {
 
   const handleShare = async () => {
     try {
+      const pageTitle = document.title;
+      let shareText = 'Únete a esta novena de protección espiritual';
+      
+      if (pathname.includes('/oraciones-diarias')) {
+        shareText = 'Descubre estas oraciones diarias con San Benito';
+      } else if (pathname.includes('/novena')) {
+        shareText = 'Acompáñame en esta novena de protección espiritual';
+      }
+
       if (navigator.share) {
         await navigator.share({
-          title: 'Novena de San Benito',
-          text: 'Únete a esta novena de protección espiritual',
+          title: pageTitle,
+          text: shareText,
           url: window.location.href
         });
-      } else {
-        // Fallback para navegadores que no soportan Web Share API
+      } else if (navigator.clipboard) {
         await navigator.clipboard.writeText(window.location.href);
-        alert('Enlace copiado al portapapeles');
+        toast.success('Enlace copiado al portapapeles', {
+          position: 'bottom-center',
+          style: {
+            background: darkMode ? '#1f2937' : '#ffffff',
+            color: darkMode ? '#ffffff' : '#1f2937',
+          }
+        });
+      } else {
+        // Fallback para navegadores muy antiguos
+        const textArea = document.createElement('textarea');
+        textArea.value = window.location.href;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        toast.success('Enlace copiado', {
+          position: 'bottom-center',
+          style: {
+            background: darkMode ? '#1f2937' : '#ffffff',
+            color: darkMode ? '#ffffff' : '#1f2937',
+          }
+        });
       }
     } catch (err) {
       console.error('Error al compartir:', err);
+      toast.error('Error al compartir', {
+        position: 'bottom-center',
+        style: {
+          background: darkMode ? '#1f2937' : '#ffffff',
+          color: darkMode ? '#ffffff' : '#1f2937',
+        }
+      });
     }
   };
 
@@ -36,23 +87,52 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
             <span className="text-2xl mr-2">✝️</span>
             <span className={`font-bold ${darkMode ? 'text-blue-400' : 'text-blue-700'}`}>San Benito</span>
+            <button 
+              onClick={toggleDarkMode}
+              className={`${darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} p-2 rounded-full shadow transition`}
+              aria-label="Cambiar modo oscuro"
+            >
+              {darkMode ? '☀️' : '🌙'}
+            </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#oracion" className={`${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} transition`}>Inicio</Link>
-            <Link href="#oraciones-diarias" className={`${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} transition`}>Oraciones</Link>
-            <Link href="#dias-container" className={`${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} transition`}>Novena</Link>
-            <button 
-              onClick={handleShare}
-              className="bg-green-600 text-white px-4 py-1 rounded-full shadow hover:bg-green-700 transition flex items-center gap-2"
+            <Link 
+              href="/" 
+              className={`${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} transition relative py-1 px-2 rounded-md ${activeTab === 'oracion' ? (darkMode ? 'bg-gray-700' : 'bg-blue-50') : ''}`}
+              aria-current={activeTab === 'oracion' ? 'page' : undefined}
             >
-              <span><LuShare /></span>
-              <span>Compartir</span>
-            </button>
+              Inicio
+              {activeTab === 'oracion' && (
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4/5 h-0.5 bg-blue-500 rounded-full"></span>
+              )}
+            </Link>
+            <Link 
+              href="/oraciones-diarias" 
+              className={`${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} transition relative py-1 px-2 rounded-md ${activeTab === 'oraciones' ? (darkMode ? 'bg-gray-700' : 'bg-blue-50') : ''}`}
+              aria-current={activeTab === 'oraciones' ? 'page' : undefined}
+              prefetch={true}
+            >
+              Oraciones
+              {activeTab === 'oraciones' && (
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4/5 h-0.5 bg-blue-500 rounded-full"></span>
+              )}
+            </Link>
+            <Link 
+              href="/novena" 
+              className={`${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} transition relative py-1 px-2 rounded-md ${activeTab === 'novena' ? (darkMode ? 'bg-gray-700' : 'bg-blue-50') : ''}`}
+              aria-current={activeTab === 'novena' ? 'page' : undefined}
+              prefetch={true}
+            >
+              Novena
+              {activeTab === 'novena' && (
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4/5 h-0.5 bg-blue-500 rounded-full"></span>
+              )}
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -71,39 +151,41 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className={`md:hidden ${darkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
+        <div className={`md:hidden ${darkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link 
-              href="#oracion" 
-              className={`block px-3 py-2 ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'}`}
+              href="/" 
+              className={`block px-3 py-2 ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} ${activeTab === 'oracion' ? (darkMode ? 'bg-gray-600' : 'bg-blue-50') : ''}`}
               onClick={toggleMobileMenu}
+              aria-current={activeTab === 'oracion' ? 'page' : undefined}
             >
-              Inicio
+              <div className="flex items-center">
+                <span className="mr-2">🏠</span>
+                Inicio
+              </div>
             </Link>
             <Link 
-              href="#oraciones-diarias" 
-              className={`block px-3 py-2 ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'}`}
+              href="/oraciones-diarias" 
+              className={`block px-3 py-2 ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} ${activeTab === 'oraciones' ? (darkMode ? 'bg-gray-600' : 'bg-blue-50') : ''}`}
               onClick={toggleMobileMenu}
+              aria-current={activeTab === 'oraciones' ? 'page' : undefined}
             >
-              Oraciones
+              <div className="flex items-center">
+                <span className="mr-2">🙏</span>
+                Oraciones
+              </div>
             </Link>
             <Link 
-              href="#dias-container" 
-              className={`block px-3 py-2 ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'}`}
+              href="/novena" 
+              className={`block px-3 py-2 ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} ${activeTab === 'novena' ? (darkMode ? 'bg-gray-600' : 'bg-blue-50') : ''}`}
               onClick={toggleMobileMenu}
+              aria-current={activeTab === 'novena' ? 'page' : undefined}
             >
-              Novena
+              <div className="flex items-center">
+                <span className="mr-2">📿</span>
+                Novena
+              </div>
             </Link>
-            <button 
-              className={`block w-full text-left px-3 py-2 ${darkMode ? 'text-green-400 hover:text-green-300' : 'text-green-600 hover:text-green-800'} flex items-center gap-2`}
-              onClick={() => {
-                handleShare();
-                toggleMobileMenu();
-              }}
-            >
-              <span><LuShare /></span>
-              <span>Compartir</span>
-            </button>
           </div>
         </div>
       )}

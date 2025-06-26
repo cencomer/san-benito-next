@@ -1,0 +1,44 @@
+{
+  "terms": {
+    "title": "Términos y Condiciones de Uso - San Benito App",
+    "content": [
+      "Bienvenido/a a San Benito App. Este sitio web ofrece información, recursos espirituales y oraciones relacionadas con la devoción a San Benito de Nursia, incluyendo la novena en su honor.",
+      "Al acceder y utilizar este sitio web, usted acepta cumplir con los siguientes términos y condiciones:",
+      "Propósito: Los contenidos (textos, oraciones, imágenes) se proporcionan únicamente con fines informativos y de devoción personal. No constituyen asesoramiento religioso, médico, legal o profesional.",
+      "Uso Aceptable: Usted se compromete a utilizar el sitio y sus contenidos de manera lícita, respetuosa y conforme a la fe católica. Queda prohibido cualquier uso que pueda dañar, sobrecargar o perjudicar el funcionamiento del sitio o la experiencia de otros usuarios.",
+      "Propiedad Intelectual: Todos los contenidos (textos de oraciones y novenas originales, imágenes propias, diseño) son propiedad de San Benito App o de sus respectivos licenciantes y están protegidos por derechos de autor y otras leyes de propiedad intelectual. Se permite su uso personal y privado.",
+      "Contenido de Terceros: Algunos contenidos (como imágenes de dominio público o citas) pueden pertenecer a terceros. Se respetan sus derechos y se atribuyen cuando es posible.",
+      "Exclusión de Garantías: El sitio y sus contenidos se ofrecen \"tal cual\". No garantizamos su exactitud, integridad, utilidad o disponibilidad continua.",
+      "Limitación de Responsabilidad: San Benito App no será responsable por ningún daño directo, indirecto, incidental o consecuente que surja del uso o la imposibilidad de uso de este sitio o su contenido.",
+      "Modificaciones: Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor al ser publicados aquí."
+    ]
+  },
+  "privacy": {
+    "title": "Política de Privacidad - San Benito App",
+    "content": [
+      "En San Benito App, respetamos tu privacidad y nos comprometemos a proteger tus datos personales.",
+      "Información que Recopilamos:",
+      "- Información Básica de Contacto: Si nos contactas a través de un formulario o correo electrónico, recopilamos tu nombre y dirección de correo electrónico para responder a tu consulta.",
+      "- Datos de Navegación: Utilizamos cookies técnicas necesarias para el funcionamiento básico del sitio.",
+      "Uso de la Información:",
+      "- Responder a tus consultas y solicitudes de información.",
+      "- Gestionar el funcionamiento técnico y la seguridad del sitio web.",
+      "Protección de Datos: Implementamos medidas de seguridad técnicas y organizativas razonables para proteger tus datos.",
+      "Compartir Información: No vendemos, alquilamos ni compartimos tu información personal con terceros con fines comerciales.",
+      "Tus Derechos: Puedes tener derecho a acceder, rectificar, oponerte al tratamiento o suprimir tus datos personales."
+    ]
+  },
+  "contact": {
+    "title": "Contacto - San Benito App",
+    "content": [
+      "¿Tienes preguntas, comentarios o deseas más información sobre la devoción a San Benito o la novena?",
+      "Puedes ponerte en contacto con nosotros a través de:",
+      "Correo Electrónico: contacto@sanbenito.app",
+      "Horario de Atención:",
+      "Intentamos responder a todas las consultas en un plazo de 24-48 horas hábiles.",
+      "Por favor, ten en cuenta:",
+      "- Este contacto es exclusivamente para asuntos relacionados con el contenido de esta página web.",
+      "- No podemos ofrecer asesoramiento espiritual personalizado, médico o legal."
+    ]
+  }
+}
